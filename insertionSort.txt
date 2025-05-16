@@ -1,0 +1,61 @@
+Insertion Sort
+
+22, 27, 16, 2, 18, 6
+
+1. Aşama: 22, 27, 16, 2, 18, 6
+2. Aşama: 22, 27, 16, 2, 18, 6 → 27 > 16 → 22, 16, 27, 2, 18, 6 → 22 > 16 → 16, 22, 27, 2, 18, 6
+3. Aşama: 16, 22, 27, 2, 18, 6 → 27 > 2 → 16, 22, 2, 27, 18, 6 → 22 > 2 → 16, 2, 22, 27, 18, 6 → 16 > 2 → 2, 16, 22, 27, 18, 6
+4. Aşama: 2, 16, 22, 27, 18, 6 → 27 > 18 → 2, 16, 22, 18, 27, 6 → 22 > 18 → 2, 16, 18, 22, 27, 6
+5. Aşama: 2, 16, 18, 22, 27, 6 → 27 > 6 → 2, 16, 18, 22, 6, 27 → 22 > 6 → 2, 16, 18, 6, 22, 27 → 18 > 6 → 2, 16, 6, 18, 22, 27 → 16 > 6 → 2, 6, 16, 18, 22, 27
+
+Sıralama Sonucu:
+{2, 6, 16, 18, 22, 27}
+
+
+
+
+
+ Big-O Gösterimi:
+
+Insertion Sort'un zaman karmaşıklığı:
+
+ Best Case: O(n) — dizi zaten sıralıysa
+ Average Case: O(n²)
+ Worst Case: O(n²) — dizi ters sıralıysa
+
+Cevap:{O(n^2)}
+
+
+
+
+
+ 18 Sayısının Durumu (Time Complexity Case)
+
+Dizi sıralandıktan sonra: 2, 6, 16, 18, 22, 27
+18 sayısı dizinin ortasında yer alıyor.
+Average Case
+
+
+
+
+Selection Sort 
+Verilen Dizi:
+7, 3, 5, 8, 2, 9, 4, 15, 6
+
+Selection Sort, her adımda dizinin kalan kısmındaki en küçük elemanı seçer ve başa yerleştirir.
+
+ 1. Adım:
+
+{2}, 3, 5, 8, 7, 9, 4, 15, 6
+
+ 2. Adım:
+
+2, {3}, 5, 8, 7, 9, 4, 15, 6
+
+ 3. Adım:
+
+2, 3, {4}, 8, 7, 9, 5, 15, 6
+
+ 4. Adım:
+
+2, 3, 4, {5}, 7, 9, 8, 15, 6
