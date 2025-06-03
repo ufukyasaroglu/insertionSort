@@ -1,0 +1,62 @@
+                                  +------------------+
+                                  |     Simulator     |
+                                  +------------------+
+                                  | - saat: Clock     |
+                                  | - bina: Bina      |
+                                  | - yolcuListesi    |
+                                  +------------------+
+                                  | +baslat()         |
+                                  | +yolcuUret()      |
+                                  +------------------+
+
+                                         |
+                                         ▼
+                              +-------------------+
+                              |       Bina        |
+                              +-------------------+
+                              | - katlar: List<Kat>|
+                              | - asansorler: List<Asansor> |
+                              +-------------------+
+                              | +asansorAta()     |
+                              +-------------------+
+
+        +------------------+                              +----------------+
+        |       Kat        |                              |    Asansor     |
+        +------------------+                              +----------------+
+        | - numara: int    |                              | - id: int      |
+        | - zil: Zil       |                              | - kapasite: int|
+        | - sinyal: Sinyal |                              | - yolcular     |
+        | - disKapilar     |                              | - katGosterge  |
+        | - cagrilar       |                              | - kontrolPanel |
+        +------------------+                              | - durum        |
+        | +cagriAl()       |                              | - konum: int   |
+        +------------------+                              +----------------+
+                                                           | +hareketEt()   |
+                                                           | +yolcuAl()     |
+                                                           | +yolcuBirak()  |
+                                                           +----------------+
+
+     +--------------+       +------------------+          +------------------+
+     |    Yolcu     |       |   KontrolPanel   |          |    KatGosterge   |
+     +--------------+       +------------------+          +------------------+
+     | - id         |       | - hedefler: List<int> |      | - aktifKat: int |
+     | - basKat     |       | - acilDurumDugme       |     +------------------+
+     | - hedefKat   |       | - kapilarDugme         |
+     +--------------+       +------------------------+
+
+                         +---------+         +----------------+
+                         |  Zil    |         |    Sinyal      |
+                         +---------+         +----------------+
+                         | +çal()  |         | - yön: enum     |
+                         +---------+         | +göster()       |
+                                             +----------------+
+
+                         +-------------------+
+                         |       Clock        |
+                         +-------------------+
+                         | - simuleZaman: int |
+                         +-------------------+
+                         | +bekle(ms)         |
+                         | +zamanGuncelle()   |
+                         +-------------------+
+
