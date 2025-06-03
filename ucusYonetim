@@ -1,0 +1,41 @@
+                                +--------------------+
+                                |   HavaYoluSirketi  |
+                                +--------------------+
+                                | - id: String       |
+                                | - isim: String     |
+                                +--------------------+
+                                | +ucaklar: List<Ucak>       |
+                                | +pilotlar: List<Pilot>     |
+                                +--------------------+
+                                          |
+                                          |
+                            +-------------+-------------+
+                            |                           |
+                 +----------------+             +------------------+
+                 |     Ucak       |<>---------->|     UcakTipi     |
+                 +----------------+             +------------------+
+                 | - id: String   |             | - ad: String     |
+                 | - durum: enum  |             | - gerekliPilot: int |
+                 +----------------+             +------------------+
+
+       +----------------+            +----------------+
+       |    Ucus        |<>----------|    Pilot       |
+       +----------------+            +----------------+
+       | - id: String   |            | - id: String   |
+       | - kalkis: Zaman|            | - isim: String |
+       | - inis: Zaman  |            | - deneyim: int |
+       +----------------+            +----------------+
+       | - ucak: Ucak   |
+       | - pilot: Pilot |
+       | - yardimci: Pilot |
+       | - kalkisHavalimani: Havaalani |
+       | - varisHavalimani: Havaalani  |
+       +----------------+
+
+                          +------------------+
+                          |    Havaalani     |
+                          +------------------+
+                          | - id: String     |
+                          | - ad: String     |
+                          +------------------+
+
